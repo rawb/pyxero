@@ -275,7 +275,7 @@ class BaseManager(object):
 
     def _delete(self, id):
         uri = '/'.join([self.base_url, self.name, id])
-        return uri, {}, 'delete', None, None, False
+        return uri, {}, 'post', None, None, False
 
     def _put_attachment_data(self, id, filename, data, content_type, include_online=False):
         """Upload an attachment to the Xero object."""
